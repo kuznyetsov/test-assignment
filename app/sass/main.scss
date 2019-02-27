@@ -1,0 +1,370 @@
+@import '_vars';
+@import '_header';
+@import '_header-offer';
+@import '_list';
+@import '_startups';
+@import '_about';
+@import '_partners';
+@import '_contact';
+@import '_footer';
+//@import "css-hamburgers/_sass/hamburgers/hamburgers";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.scrolled {
+    display: none;
+}
+
+body, section {
+    overflow-x: hidden;
+}
+
+.footer {
+    overflow: hidden;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+li, ul {
+    display: block;
+    a {
+     color: #fff;   
+    }
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.text {
+    font-family: $roboto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20pt;
+}
+
+.title {
+    font-family: $arial;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.btn-up {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background: #333;
+    z-index: 100;
+    outline: 0!important;
+    cursor: pointer;
+}
+    
+.btn-up:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    #menu {
+        li {
+            padding: 15px;
+        }
+    }
+    .companies-title, .companies-desc-item, .corporat-title {
+        margin-left: 0;
+        h2 {
+            font-size: 20px;
+        }
+    }
+    .companies-desc-item2 {
+        margin-top: 15px;
+    }
+    .corporat-title, .corporat-desc-item {
+        margin-left: 20px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    #menu {
+        display: none;
+        width: 300px;
+        ul {
+            flex-direction: column;
+            padding-left: 20px;
+            line-height: 50px;
+            padding-top: 0;
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+    .open {
+        display: block!important;
+    }
+    .hamburger {
+        display: block;
+    }
+    .startups-desc {
+        margin-left: 100px;
+    }
+    .companies-title, .companies-desc-item {
+        .title {
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+    .corporat-title, .corporat-desc-item {
+        .title {
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+    .footer-subscribe {
+        margin-left: 150px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    #menu {
+        ul{
+            //line-height: 15px;
+            //a {
+            //    font-size: 13px;
+            //}
+        }
+    }
+    .cta {
+        .header-rectangle {
+            display: none;
+        }
+        left: 0;
+        top: 150px;
+    }
+    //.first-row {
+    //    margin-left: 10%;
+    //}
+    //.second-row {
+    //    margin-left: 9%;
+    //}
+    .companies-title, .corporat-title, .startups-title {
+        width: 400px;
+        margin-top: 50px;
+        .title {
+            font-size: 15px;
+        }
+    }
+    .companies-desc-item, .corporat-desc-item, .startups-desc-item1 {
+        width: 500px;
+        p {
+            font-size: 15px;
+        }
+    }
+    .startups-desc {
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+    .corporat-foto {
+        margin-top: 50px;
+    }
+    .contact-first-row, .contact-second-row {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .file_upload {
+        width: 308px;
+        margin: 20px auto;
+        p {
+            font-size: 9px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #menu {
+        margin-left: 0;
+        ul {
+            line-height: 20px;
+            padding: 0;
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+    .cta {
+        .header-title{
+            font-size: 43px;
+        }
+        .header-subtitle {
+            font-size: 15px;
+            width: 350px;
+        }
+    }
+    .list-bg {
+        text-align: center;
+        .list {
+            li:before {
+                display: none;
+            }
+            a {
+                font-size: 18px;
+            }
+        }
+        .line {
+            margin-right: auto;
+        }
+        .title-list {
+            font-size: 22px;
+            padding-bottom: 10px;
+        }
+    }
+    .startups-desc-item1, .startups-desc-item2 {
+        p {
+            width: 200px;
+        }
+    }
+    .companies-desc-item, .corporat-desc-item {
+        p {
+            width: 250px;
+        }
+    }
+    .companies-title, .corporat-title {
+        .title {
+            margin-left: -10px;
+            width: 300px;
+            line-height: 20px;
+        }
+    }
+    .first-row-comp {
+        margin-left: 20px;
+    }
+    .second-row {
+        margin-left: 10px;
+    }
+    .corporat-desc-item {
+        p {
+            margin-left: 10px;
+        }
+    }
+    .partners-title {
+        margin-top: 100px;
+    }
+    .footer-logo {
+        min-width: 150px;
+    }
+    .footer-nav {
+        margin-left: 50px;
+        a {
+            font-size: 10px;
+        }
+    }
+    .footer-subscribe {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .cta {
+        .header-subtitle {
+            font-size: 15px;
+            width: 300px;
+        }
+    }
+    #menu {
+        ul {
+            padding-top: 10px;
+            line-height: 10px;
+        }
+    }
+    .startups-desc {
+        margin-left: 20px;
+    }
+    .companies-desc {
+        p {
+            width: 200px;
+        }
+    }
+    .companies-title {
+        .title {
+            width: 250px;
+            margin-left: -20px;
+        }
+    }
+    .second-row {
+        margin-left: 0;
+    }
+    .corporat-desc-item {
+        p {
+            width: 230px;
+        }
+    }
+    .contact-first-row, .contact-second-row {
+        input, textarea, .app-select {
+            width: 200px!important;
+        }
+    }
+    .file_upload {
+        width: 200px;
+        p {
+            font-size: 10px;
+            width: 180px;
+        }
+    }
+    .footer-logo {
+        margin-left: 10px;
+    }
+    .footer-nav {
+        margin-left: 20px;
+    }
+    .footer-subscribe {
+        margin-top: -40px;
+    }
+}
+
+.video-container {
+    .poster {
+        img {
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+            }
+        }
+} 
+
+
+.video-container {
+    video {
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+  }
+}
+
+
+
